@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>cafee app</title>
+    <!--     Fonts and icons     -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"
+    />
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/42d5adcbca.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link
+      id="pagestyle"
+      href="../assets/css/material-dashboard.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container position-sticky z-index-sticky top-0">
+      <div class="row">
+        <div class="col-12"></div>
+      </div>
+    </div>
+    <main class="main-content mt-0">
+      <section>
+        <div class="page-header min-vh-100">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column"
+              >
+                <div
+                  class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
+                >
+                  <img src="../assets/img/svgs/img.svg" alt="" />
+                </div>
+              </div>
+              <div
+                class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5"
+              >
+                <div class="card card-plain">
+                  <div class="card-header">
+                    <h4 class="font-weight-bolder">Sign Up</h4>
+                    <p class="mb-0">
+                      Enter your email and password to register
+                    </p>
+                  </div>
+                  <div class="card-body">
+                    <form role="form">
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" />
+                      </div>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="usernameRequired"
+                      >
+                        *Username required
+                      </p>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="usernameInvalid"
+                      >
+                        *Username Invalid - Enter only characters
+                      </p>
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" />
+                      </div>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="emailRequired"
+                      >
+                        *E-mail required
+                      </p>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="emailInvalid"
+                      >
+                        *E-mail is not valid
+                      </p>
+
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Password</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                        />
+                      </div>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="invalidpassword"
+                      >
+                        *Invaild Password
+                      </p>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="requiredpassword"
+                      >
+                        *Password required
+                      </p>
+
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="confirmPassword"
+                        />
+                      </div>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="warningmsg"
+                      >
+                        *Passwords doesn't match
+                      </p>
+
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Room Number</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="roomNumber"
+                        />
+                      </div>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="invalidroom"
+                      >
+                        *Invalid room number
+                      </p>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="roomrequired"
+                      >
+                        *Room number required
+                      </p>
+                      <div class="col-12 col-md-8">
+                        <p class="fs-6">Profile Picture</p>
+                        <input
+                          type="file"
+                          name="avatar"
+                          accept="image/png, image/jpeg"
+                          class="btn btn-link"
+                          id="image"
+                        />
+                      </div>
+                      <p
+                        style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        "
+                        id="picrequired"
+                      >
+                        *Image required
+                      </p>
+                      <div class="text-center">
+                        <button
+                          type="button"
+                          class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0"
+                          id="submit"
+                        >
+                          Sign Up
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                    <p class="mb-2 text-sm mx-auto">
+                      Already have an account?
+                      <a
+                        href="./sign-in.html"
+                        class="text-primary text-gradient font-weight-bold"
+                        >Sign in</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div
+      class="toast fade hide p-2 mt-2 bg-white"
+      role="alert"
+      aria-live="assertive"
+      id="dangerToast"
+      aria-atomic="true"
+      style="position: absolute; top: 81%"
+    >
+      <div class="toast-header border-0">
+        <i class="material-icons text-danger me-2"> campaign </i>
+        <span class="me-auto text-gradient text-danger font-weight-bold fs-5"
+          >Error!!!
+        </span>
+        <i
+          class="fas fa-times text-md ms-3 cursor-pointer"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></i>
+      </div>
+      <hr class="horizontal dark m-0" />
+      <div class="toast-body text-danger" id="errormsg"></div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/material-dashboard.js"></script>
+    <!--   Logic JS Files   -->
+    <script src="../assets/js/logic/signUp.js"></script>
+  </body>
+</html>

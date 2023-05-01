@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <!-- CSS Files - core -->
+    <link id="pagestyle" href="../assets/css/material-dashboard.min.css" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show bg-gray-200">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-3 shadow my-3 py-2 start-0 end-0 mx-4">
+        <div class="container-fluid ps-2 pe-0">
+            <a class="nav-link me-2 font-weight-bolder fs-4" href="./sign-in.html" style="font-family: 'Great Vibes', cursive">
+                Caffe App
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mt-2">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="./AdminHome.html">
+                            <i class="fa fa-home opacity-6 text-dark me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2" href="./Products.html">
+                            <i class="fa fa-table opacity-6 text-dark me-1"></i> Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2" href="./Users.html">
+                            <i class="fa fa-user opacity-6 text-dark me-1"></i> Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2" href="./Orders.html">
+                            <i class="fa fa-opencart opacity-6 text-dark me-1"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-2" href="./Checks.html">
+                            <i class="fa fa-wallet opacity-6 text-dark me-1"></i> Checks
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-lg-block d-none">
+                    <li class="nav-item" id="logoutBtn">
+                        <a class="btn btn-sm mb-0 me-1 bg-gradient-danger">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+        <div class="container-fluid py-1 px-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                    <li class="breadcrumb-item text-sm">
+                        <a class="opacity-5 text-dark" href="javascript:;">Pages</a>
+                    </li>
+                    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">
+                        Admin
+
+                    </li>
+                    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">
+                        Edit User
+                    </li>
+                </ol>
+                <h6 id="adimnName" class="font-weight-bolder mb-0"></h6>
+            </nav>
+            <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                    <div class="input-group input-group-outline"></div>
+                </div>
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item d-flex align-items-center">
+                        <label for="dark-version" class="m-0">
+                            <i class="fa fa-moon-o cursor-pointer"> </i>
+                        </label>
+                        <input class="form-check-input mt-1 ms-auto d-none" type="checkbox" id="dark-version" onclick="darkMode(this)" />
+                    </li>
+                    <li class="nav-item px-3 d-flex align-items-center">
+
+                    </li>
+                    <li class="col-auto">
+                        <div class="avatar avatar-xl position-relative">
+                            <img id="adminImage" alt="profile_image " class="w-100 border-radius-lg h-75 shadow-sm " />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+
+
+
+    </div>
+
+
+
+    <main class="main-content mt-0">
+        <section>
+            <div class="page-header ">
+                <div class="container justify-content-center align-items-center">
+                    <div class="row ">
+
+                        <div class=" col-lg-8 col-12">
+                            <div class="card card-plain">
+                                <div class="">
+                                    <h4 class="font-weight-bolder">Edit User</h4>
+                                    <p class="mb-0">
+                                        Enter user information to Add
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    <form role="form">
+                                        <div class="input-group input-group-outline mb-3 focus is-focused">
+                                            <label class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" />
+                                        </div>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="usernameRequired">
+                                            *Username required
+                                        </p>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="usernameInvalid">
+                                            *Username Invalid - Enter only characters
+                                        </p>
+                                        <div class="input-group input-group-outline mb-3 focus is-focused">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" />
+                                        </div>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="emailRequired">
+                                            *E-mail required
+                                        </p>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="emailInvalid">
+                                            *E-mail is not valid
+                                        </p>
+
+                                        <div class="input-group input-group-outline mb-3 focus is-focused">
+                                            <label class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" />
+                                        </div>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="invalidpassword">
+                                            *Invaild Password
+                                        </p>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="requiredpassword">
+                                            *Password required
+                                        </p>
+
+                                        <div class="input-group input-group-outline mb-3 focus is-focused">
+                                            <label class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirmPassword" />
+                                        </div>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="warningmsg">
+                                            *Passwords doesn't match
+                                        </p>
+
+                                        <div class="input-group input-group-outline mb-3 focus is-focused">
+                                            <label class="form-label">Room Number</label>
+                                            <input type="text" class="form-control" id="roomNumber" />
+                                        </div>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="invalidroom">
+                                            *Invalid room number
+                                        </p>
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="roomrequired">
+                                            *Room number required
+                                        </p>
+                                        <!-- <div class="col-12 col-md-8">
+                                            <p class="fs-6">Profile Picture</p>
+                                            <input type="file" name="avatar" accept="image/png, image/jpeg" class="btn btn-link" id="image" />
+                                        </div> -->
+                                        <p style="
+                          display: none;
+                          color: rgb(197, 12, 12);
+                          font-size: 13px;
+                        " id="picrequired">
+                                            *Image required
+                                        </p>
+                                        <div class="text-center col-lg-2 col-12">
+                                            <button type="button" class="btn btn-lg bg-gradient-success btn-lg w-100 mt-4 mb-0 " id="submit">
+                                                Edit
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-normal" id="exampleModalLabel">
+                        Add Category
+                    </h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group input-group-outline mb-3 ">
+                        <label class="form-label">Category Name</label>
+                        <input type="text" class="form-control" />
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn bg-gradient-primary">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-normal" id="exampleModalLabel">
+                        Add Category
+                    </h5>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn bg-gradient-primary">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true" style="position: absolute; top: 81%">
+        <div class="toast-header border-0">
+            <i class="material-icons text-danger me-2"> campaign </i>
+            <span class="me-auto text-gradient text-danger font-weight-bold fs-5">Error!!!
+            </span>
+            <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
+        </div>
+        <hr class="horizontal dark m-0" />
+        <div class="toast-body text-danger" id="errormsg"></div>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/material-dashboard.js"></script>
+    <!--   Logic JS Files   -->
+    <script src="../assets/js/logic/adminControl/editUserData.js"></script>
+    <script src="../assets/js/logic/adminControl/adminSession.js"></script>
+    <script src="../assets/js/logic/adminControl/editUserData.js"></script>
+</body>
+
+</html>
